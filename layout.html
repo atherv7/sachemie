@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<hmtl>
+    <head>
+        <title>Sachemie</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header id="nav-bar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </header>
+            <script type="text/javascript">
+                window.addEventListener("scroll", function(){
+                    var navBar = document.querySelector("header"); 
+                    navBar.classList.toggle("sticky", window.scrollY > 0); 
+                })
+            </script>
+            <div id="home" class="front">
+                <div class="front-child" id="title">
+                    <img src="title.png">
+                </div>
+                <div class="front-child" id="mole">
+                    <img src="cell.png">
+                </div>
+            </div>
+            <div id="about">
+                <div id="about-text">
+                    <h1>About Sachemie</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus eligendi 
+                    totam temporibus ipsa, laudantium ratione! Laboriosam ut, 
+                    magnam numquam in fugiat sed. Dolor aut tenetur consequatur velit, 
+                    libero quam numquam!</p>
+                </div>
+            </div>
+            <div id="services">
+                <div class="wrapper">
+                    <button class="btn" id="btn1">Concept and clinical phases development</button>
+                    <button class="btn" id="btn2">Antibody-drug conjugates/Protein conjugates</button>
+                    <button class="btn" id="btn3">Payload/Oligo/PROTAC linker chemistry</button>
+                    <button class="btn" id="btn4">Strategic Planning</button>
+                    <button class="btn" id="btn5">Due diligence and technology assessment</button>
+                    <button class="btn" id="btn6">Post-aquisition integration advisory role</button>
+                    <button class="btn" id="btn7">Portfolio review/assessment</button>
+                </div>
+                <div id="services-text">
+                    <h1>Sachemie services</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Veniam voluptatum alias eveniet aspernatur distinctio quam dignissimos, 
+                        reprehenderit quidem et repellat saepe, repudiandae quasi enim laudantium 
+                        impedit provident, ipsum nulla vitae.
+                    </p>
+                    <div class="modal-container" id="concept">
+                        <button class="close" id="btn1.2"><img src="ex.png" height="30" width="30"></button>
+                        <div class="modal">
+                            <h1>Concept and clinical phases development</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Nulla alias similique voluptate officia nesciunt explicabo corporis molestias, 
+                                accusantium velit. Possimus?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-container" id="antibody">
+                        <button class="close" id="btn2.2"><img src="ex.png" height="30" width="30"></button>
+                        <div class="modal">
+                            <h1>Antibody-drug conjugates/Protein conjugates</h1>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Reiciendis reprehenderit omnis officiis nam accusamus exercitationem quia maiores, 
+                                impedit aliquam corrupti!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-container" id="payload">
+                        <button class="close" id="btn3.2"><img src="ex.png" height="30" width="30"></button>
+                        <div class="modal">
+                            <h1>Payload/Oligo/PROTAC linker chemistry</h1>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Soluta cum voluptatum recusandae repudiandae magnam voluptates voluptatem facilis 
+                                fugiat fuga libero?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-container" id="strat">
+                        <button class="close" id="btn4.2"><img src="ex.png" height="30" width="30"></button>
+                        <div class="modal">
+                            <h1>Strategic Planning</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Soluta aliquid expedita ut alias labore vel commodi nihil 
+                                quaerat deserunt minus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-container" id="due">
+                        <button class="close" id="btn5.2"><img src="ex.png" height="30" width="30"></button>
+                        <div class="modal">
+                            <h1>Due diligence and technology assessment</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                Sed tempora obcaecati qui fuga et, culpa dolorum accusamus 
+                                minima numquam. Delectus!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-container" id="post">
+                        <button class="close" id="btn6.2"><img src="ex.png" height="30" width="30"></button>
+                        <div class="modal">
+                            <h1>Post-aquisition integration advisory role</h1>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Repellat facere sequi deserunt voluptatibus totam possimus sint accusamus 
+                                distinctio, blanditiis repellendus!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-container" id="port">
+                        <button class="close" id="btn7.2"><img src="ex.png" height="30" width="30"></button>
+                        <div class="modal">
+                            <h1>Portfolio review/assessment</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Sapiente optio deserunt eum accusamus, blanditiis voluptatem repellat consequuntur 
+                                velit tenetur. Soluta.
+                            </p>
+                        </div>
+                    </div>
+                    <script src="modal.js"></script>
+                </div>
+                <script>
+                    const btn = document.querySelectorAll('#btn1'); 
+                    btn.onmousemove = function(e) {
+                        const x = e.pageX - btn.offsetLeft; 
+                        const y = e.pageY - btn.offsetTop; 
+
+                        btn.style.setProperty('--x', x + 'px');
+                        btn.style.setProperty('--y', y + 'px');  
+                    }
+                </script>
+            </div>
+            <div id="contact">
+                <h1>contact information</h1>
+            </div>
+        </div>
+    </body>
+</hmtl>
